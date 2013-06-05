@@ -20,6 +20,7 @@
 * If not, see <http://www.gnu.org/licenses/lgpl-3.0.txt>
 * 
 ------------------------------------------------------------------------*/
+include('booster_init.php');
 include('booster_inc.php');
 
 ((isset($_GET['dir'])) ? $source = str_replace('>','..',rtrim(preg_replace('/[^a-z0-9,\-_\.\/>]/i','',$_GET['dir']),'/')) : $source = 'js');

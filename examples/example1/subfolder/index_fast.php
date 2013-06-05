@@ -1,5 +1,6 @@
 <?php 
-include('../../../booster/booster_inc.php'); 
+include('../../../booster/booster_init.php');
+include('../../../booster/booster_inc.php');
 $booster = new Booster();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -94,7 +95,7 @@ echo $booster->css_markup();
       <li><a href="http://www.free-css.com/">Client</a> |</li>
       <li><a href="http://www.free-css.com/">Contact</a> </li>
     </ul>
-    <p class="copyright">© 9blog division. All rights reserved.</p>
+    <p class="copyright">ï¿½ 9blog division. All rights reserved.</p>
     <ul class="templateworld">
       <li>design by:</li>
       <li><a href="http://www.templateworld.com" target="_blank">Template World</a></li>

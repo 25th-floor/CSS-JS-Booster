@@ -30,27 +30,6 @@
 * @link      http://github.com/Schepp/CSS-JS-Booster 
 */
 
-// Starting zlib-compressed output
-@ini_set('zlib.output_compression',2048);
-@ini_set('zlib.output_compression_level',4);
-
-// Starting gzip-compressed output if zlib-compression is turned off
-if (
-isset($_SERVER['HTTP_ACCEPT_ENCODING'])
-&& substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')
-&& function_exists('ob_gzhandler') 
-&& (!ini_get('zlib.output_compression') || ini_get('zlib.output_compression') == '' || strtolower(ini_get('zlib.output_compression')) == 'off' || intval(ini_get('zlib.output_compression')) != 2048)
-&& !function_exists('booster_wp')
-)
-{
-	$booster_use_ob_gzhandler = TRUE;
-	@ob_start('ob_gzhandler');
-}
-else 
-{
-	@ob_start();
-}
-
 
 /**
 * CSS-JS-BOOSTER
@@ -2116,4 +2095,3 @@ class Booster {
 		return $markup;
 	}
 }
-?>

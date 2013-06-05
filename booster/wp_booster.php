@@ -24,7 +24,8 @@ Author URI: http://twitter.com/derSchepp
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-include('booster_inc.php'); 
+include('booster_init.php');
+include('booster_inc.php');
 
 // Pre-2.6 compatibility
 if(!defined('WP_CONTENT_URL')) define('WP_CONTENT_URL',get_option('siteurl').'/wp-content');
